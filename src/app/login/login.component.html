@@ -1,0 +1,24 @@
+<form id="login-form"  [formGroup]="loginForm" (ngSubmit)="logindata()">
+    <mat-card >
+    <h4 style="font-style:oblique; color:rgba(2, 69, 124, 0.808)" ><strong>Login</strong></h4> 
+
+<mat-form-field>
+<mat-label>Email</mat-label>
+<input matInput class="style" type="text" formControlName="emailId" name="title">
+<mat-error *ngIf="emailId?.errors?.['required']">Email Id is <strong>required</strong></mat-error>
+</mat-form-field>
+
+    <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" id="text" formControlName="password" name="content">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>   </button>
+
+    <mat-error *ngIf="password?.errors?.['required']">Password is <strong>required</strong></mat-error>
+    </mat-form-field>
+    <div class="row">
+     <button mat-raised-button color="primary" style=" width: 100px; margin-right: 100px;"  [disabled]="loginForm.invalid">SignIn</button> 
+     <a mat-raised-button color="accent"  routerLink="../SignUp" style="  width: 100px;">SignUp</a>
+    </div>
+    </mat-card>
+</form>

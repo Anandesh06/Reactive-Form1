@@ -1,0 +1,33 @@
+<mat-card>
+    <h2 style="margin-left:40% ;"> <strong>User Profile</strong> </h2>
+    <mat-card-header>
+    
+      <!-- <div style="width: 350px ; height: 400px;"> -->
+        <img  style="margin-left:30% ;" src="..\assets\profileimage\{{userdata.image}}" width="150px" height="200px" alt="">
+
+  </mat-card-header>
+    <mat-card-content>
+      
+      <h2> {{ userdata.name }}</h2>
+      <h3><strong>Email Id</strong> {{ userdata.emailId }}</h3> 
+      <h3><strong>Phone Number:</strong> {{ userdata.mobileNo }}</h3> 
+      <h3><strong>Address</strong></h3>
+      <h3 style="float: left; margin-right: 50px;"><strong>House No</strong> {{ userdata.address.houseNo }}</h3> 
+      <h3 style="padding-right:50px; "><strong>Street</strong> {{ userdata.address.street }}</h3> 
+      <h3 style="float: left; margin-right: 50px;"><strong>City</strong> {{ userdata.address.city }}</h3> 
+      <h3 style="padding-left:50px;"><strong>Pincode</strong> {{ userdata.address.pincode }}</h3> 
+      
+     </mat-card-content>
+     <div class="row">
+      <div class="col">
+     <mat-card-actions style="float: left;">
+      <button mat-raised-button color="accent"  style=" margin:auto; margin-left: 50px;" >Edit Profile </button>
+  </mat-card-actions>
+</div>
+  <div class="col">
+    <mat-card-actions>
+         <button mat-raised-button color="accent"  routerLink="../home" style=" margin:auto;" >Back to Home</button>
+     </mat-card-actions>
+     </div>
+    </div>
+  </mat-card>

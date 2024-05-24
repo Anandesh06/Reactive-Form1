@@ -1,0 +1,22 @@
+.example-card {
+    max-width: auto;
+  }
+  
+mat-card{
+        margin: auto;
+    width: 500px;
+    
+  }
+  img{
+    size-adjust: 200px;
+   
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    margin-right: 20px;
+    flex: 4;
+ 
+}

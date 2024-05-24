@@ -1,0 +1,20 @@
+form{
+    padding-top: 60px;
+}
+#addnote{
+    margin: auto;
+    width: 480px;
+}
+mat-card{
+    padding: 10px;
+    /* margin-top: 20px */
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    margin-right: 20px;
+    flex: 4;
+ 
+}

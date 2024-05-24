@@ -1,0 +1,17 @@
+body {
+    height: 700px;
+    margin: 0px -10px ;
+
+    margin-top: -5px ;
+    padding: 0px -20px;    
+    background-size: 100%;
+    background-image: url("src\assets\Backgroundimage\bg1.jpg");
+
+    /* background-color: rgb(80, 78, 78); */
+
+    /* background-repeat: no-repeat; */
+    /* background-color: #cccccc; */
+
+  
+  
+   }
