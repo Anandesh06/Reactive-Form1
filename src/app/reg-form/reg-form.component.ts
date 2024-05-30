@@ -86,11 +86,10 @@ export class RegFormComponent {
     const filename:string="Registration-Form\src\assets\profileimage"+file.name;
     
     if (file) {
-      // formData.append('imageFile',file,filename);
+      formData.append('imageFile',file,filename);
       
     }
-    // const data=Object.fromEntries(formData);
-console.log(filename);
+
  
     this.regservices.registrationForm(formData).subscribe(
       {

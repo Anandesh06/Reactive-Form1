@@ -16,4 +16,10 @@ export class ProfileService {
     return this.httpclient.get("http://localhost:3000/Userdata",loginValid);
 
   }
+  updateUser(fd:FormData){
+    return this.httpclient.put("http://localhost:3000/Userdata",fd);
+
+
+  }
+  
 }

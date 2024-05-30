@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProfileService } from '../Services/profile.service';
 
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -14,10 +15,26 @@ export class ProfileComponent {
     this.getUserdata();
 
   }
+
+  updateUserDetails(formdata:FormData){
+    this.profileservice.updateUser(formdata).subscribe(
+      {
+        next :data=>{ this.snackBar.open("FoodIteam Details Updated successfuly","Thank You",{
+          duration: 3000});
+        
+        }
+          ,
+        error:data=>{this.snackBar.open("FoodIteam not Updated due to network error",'Undo',{
+          duration: 3000});
+         
+        }
+      }
+    )
+  }
   
   
   
-  userdataAUTH:any;
+  // userdataAUTH:any;
     getUserdata(){
     this.profileservice.getUserdetails().subscribe(
       {
